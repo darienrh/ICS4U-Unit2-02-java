@@ -24,10 +24,10 @@ final class Main {
     private Main() {
         throw new IllegalStateException("Cannot be instantiated");
     }
-    final public static int  factorial(int fnumber) {
-        if (fnumber == 1){
+     public static int  factorial(final int fnumber) {
+        if (fnumber == 1) {
             return 1;  //end the recursion
-        }else{
+        } else {
             return fnumber * factorial(fnumber - 1);  //#! = # * (#-1)!
         }
     }
@@ -38,13 +38,13 @@ final class Main {
     */
     public static void main(final String[] args) {
         int number;
-        Scanner myInput = new Scanner(System.in);  //Instantiate Scanner for input
+        Scanner myInput = new Scanner(System.in);
         System.out.print("Enter a integer :  ");
 
         // Block of code to try
         try {
                 number = myInput.nextInt();  //get a positive integer
-                System.out.println("The factorial of " 
+                System.out.println("The factorial of "
                 + number + " is: " + factorial(number));
         } catch (java.util.InputMismatchException errorCode) {
         // Block of code to handle errors
